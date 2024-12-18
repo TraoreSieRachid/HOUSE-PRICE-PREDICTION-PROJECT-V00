@@ -177,7 +177,7 @@ elif st.session_state.page == "Prédiction":
         st.write("---")
         try:
             transformed_data = pipeline.transform(input_data)
-            predicted_price = np.expm1(ridge_model.predict(transformed_data))
+            predicted_price = np.expm1(lgb_model.predict(transformed_data))
             st.success(f"Prix prédit : {predicted_price[0]:,.2f} unités monétaires")
         except Exception as e:
             st.error(f"Erreur : {e}")
