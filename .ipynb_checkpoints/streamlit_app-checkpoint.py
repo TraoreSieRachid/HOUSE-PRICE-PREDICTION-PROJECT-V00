@@ -19,7 +19,7 @@ def load_lgb_model():
 lgb_model = load_lgb_model()
 
 # Chargement des autres Ressourcesss
-pipeline = joblib.load('ressource/pipeline/pipeline.pkl')
+lgbm_pipe = joblib.load('ressource/pipeline/lgbm_pipe.pkl')
 data_performances = {
     "Linear Regression": joblib.load('ressource/performance/GS_lr_perform.pkl'),
     "ElasticNet": joblib.load('ressource/performance/ElasticNet_perform.pkl'),
@@ -176,7 +176,7 @@ elif st.session_state.page == "Prédiction":
     if st.button("Prédire"):
         st.write("---")
         try:
-            transformed_data = pipeline.transform(input_data)
+            transformed_data = lgbm_pipe.transform(input_data)
             predicted_price = np.expm1(lgb_model.predict(transformed_data))
             st.success(f"Prix prédit : {predicted_price[0]:,.2f} unités monétaires")
         except Exception as e:
@@ -185,9 +185,9 @@ elif st.session_state.page == "Prédiction":
 # Section Performance
 elif st.session_state.page == "Performance":
     st.subheader("📈 Performance des Modèles")
-    cols = st.columns(4)
+    cols = st.columns(3)
     for i, (model_name, performance_df) in enumerate(data_performances.items()):
-        col = cols[i % 4]
+        col = cols[i % 3]
         with col:
             st.write(f"### {model_name}")
             st.dataframe(performance_df)
