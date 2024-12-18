@@ -4,16 +4,18 @@
  ![Présentation visuelle de l'app](ressource/app_image.jpg)
 
 Fait par des élèves ingénieurs statisticiens économistes de l'Ecole nationale de la statistique et de l'analyse économique:
-- sié rachid Traoré 
-- Mum El hadj Sarr
-- Cheick Sadibou Ngom
+
 - Adoumbaye Madjyam
+- Cheick Sadibou Ngom
+- Mum El hadj Sarr
+- sié rachid Traoré 
+
 
 # Le projet est structuré en dossiers code, data et ressources
 
  Dans le dossier code, nous avons les codes concernant l'analyse exploratoire des données ,les essais de  modèles et les tests
  Dans le dossier data, nous avons les jeux de données 
- Dans le dossier ressourcs, nous avons des ressources : le modèle final enrégistré en .pkl, les performances de tous les modèles en .pkl un fichier .txt décrivant les variables de nos données, le data_reporting.html.
+ Dans le dossier ressourcs, nous avons des ressources : le modèle final enrégistré en .pkl, les performances de tous les modèles en .pkl un fichier .txt décrivant les variables de nos données, le data_reporting.html ainsi que le powerpoint pour l'exposé.
  
 # Notre mission
  **Hypothèses de départ** 
