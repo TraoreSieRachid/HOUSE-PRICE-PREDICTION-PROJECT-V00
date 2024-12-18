@@ -4,13 +4,13 @@ Fait par des élèves ingénieurs statisticiens économistes de l'Ecole national
 - sié rachid Traoré 
 - Mum El hadj Sarr
 - Cheick Sadibou Ngom
-- Adoumbaye
+- Adoumbaye Madjyam
 
 # Le projet est structuré en dossiers code, data et images
 
  Dans le dossier code, nous avons les codes concernant l'analyse exploratoire des données ,les essais de  modèles et les tests
  Dans le dossier data, nous avons les jeux de données ainsi qu'un fichier .txt décrivant les variables de nos données.
- Dans le dossier image, nous avons des ressources visuelles.
+ Dans le dossier ressources, nous avons des ressources .
  
 # Notre mission
  **Hypothèses de départ** 
