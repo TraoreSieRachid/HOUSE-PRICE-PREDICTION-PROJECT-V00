@@ -176,6 +176,11 @@ elif st.session_state.page == "Prédiction":
     if st.button("Prédire"):
         st.write("---")
         try:
+            variables_qualitatives = data.select_dtypes(include=['object', 'category']).columns
+            input_data = pd.get_dummies(data=input_data,
+                          columns=variables_qualitatives,
+                          drop_first=True,
+                         )
             predicted_price = np.expm1(lgb_model.predict(input_data))
             st.success(f"Prix prédit : {predicted_price[0]:,.2f} unités monétaires")
         except Exception as e:
