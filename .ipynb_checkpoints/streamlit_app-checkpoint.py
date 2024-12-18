@@ -13,24 +13,18 @@ st.set_page_config(page_title="Prédiction des prix immobiliers", layout="wide")
 # Fonction pour charger le modèle Ridge (mise en cache)
 @st.cache_resource
 def load_ridge_model():
-    return joblib.load('Ressources/modele_final/lgb_model.pkl')  # Remplacez par le chemin réel de votre modèle
+    return joblib.load('ressource/modele_final/lgb_model.pkl')  # Remplacez par le chemin réel de votre modèle
 
 ridge_model = load_ridge_model()
 
 # Chargement des autres Ressourcesss
-pipeline = joblib.load('Ressources/pipeline/pipeline.pkl')
+pipeline = joblib.load('ressource/pipeline/pipeline.pkl')
 data_performances = {
-    "Linear Regression": joblib.load('Ressources/performance/lr_performance.pkl'),
-    "Ridge": joblib.load('Ressources/performance/ridge_cv_performance.pkl'),
-    "Lasso": joblib.load('Ressources/performance/Lasso_cv_performance.pkl'),
-    "ElasticNet": joblib.load('Ressources/performance/ElasticNet_cv_performance.pkl'),
-    "CatBoost": joblib.load('Ressources/performance/cat_cv_performance.pkl'),
-    "Gradient Boosting Regressor": joblib.load('Ressources/performance/GBR_cv_performance.pkl'),
-    "LightGBM": joblib.load('Ressources/performance/lgbm_cv_performance.pkl'),
-    "Voting Regressor": joblib.load('Ressources/performance/vr_performance.pkl'),
-    "Stacking Regressor": joblib.load('Ressources/performance/stackreg_performance.pkl'),
-    "XGBoost": joblib.load('Ressources/performance/xgb_cv_performance.pkl'),
-    "Random Forest Regressor": joblib.load('Ressources/performance/rfr_cv_performance.pkl')
+    "Linear Regression": joblib.load('ressource/performance/GS_lr.pkl'),
+    "ElasticNet": joblib.load('ressource/performance/ElasticNet_model.pkl'),
+    "Random Forest Regressor": joblib.load('ressource/performance/rfr_model.pkl'),
+    "XGBoost": joblib.load('ressource/performance/xgb_model.pkl'),
+    "LightGBM": joblib.load('ressource/performance/lg_model.pkl'),
 }
 
 # Fonction pour charger les données (mise en cache)

@@ -22,9 +22,9 @@ pipeline = joblib.load('ressource/pipeline/pipeline.pkl')
 data_performances = {
     "Linear Regression": joblib.load('ressource/performance/GS_lr.pkl'),
     "ElasticNet": joblib.load('ressource/performance/ElasticNet_model.pkl'),
-    "Random Forest Regressor": joblib.load('ressource/performance/rfr_model.pkl')
-    "XGBoost": joblib.load('ressource/performance/xgb_model.pkl')
-    "LightGBM": joblib.load('ressource/performance/lg_model.pkl')
+    "Random Forest Regressor": joblib.load('ressource/performance/rfr_model.pkl'),
+    "XGBoost": joblib.load('ressource/performance/xgb_model.pkl'),
+    "LightGBM": joblib.load('ressource/performance/lg_model.pkl'),
 }
 
 # Fonction pour charger les données (mise en cache)
