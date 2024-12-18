@@ -17,7 +17,7 @@ Fait par des élèves ingénieurs statisticiens économistes de l'Ecole national
  [👉🔗 Cliquez ici pour y acceder: 🔗](https://house-price-prediction-project-v00-ensae-jodraff.streamlit.app/)
  ---
 
-![Présentation visuelle de l'app](ressource/images_et_videos/overview1.mp4)
+![Présentation visuelle de l'app](ressource/images_et_videos/overview1.gif)
 
 # Le projet est structuré en dossiers code, data et ressources
 
