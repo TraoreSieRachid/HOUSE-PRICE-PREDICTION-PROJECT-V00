@@ -6,14 +6,19 @@ import matplotlib.pyplot as plt
 import joblib
 from sklearn.metrics import mean_absolute_error, mean_squared_error
 import streamlit.components.v1 as components
-
+import os
 # Configuration de la page Streamlit
 st.set_page_config(page_title="Prédiction des prix immobiliers", layout="wide")
 
 # Fonction pour charger le modèle Ridge (mise en cache)
 @st.cache_resource
+
 def load_lgb_model():
-    return joblib.load('../ressource/modele_final/lgb_model.pkl')  # Remplacez par le chemin réel de votre modèle
+    model_path = 'ressource/modele_final/lgb_model.pkl'
+    if os.path.exists(model_path):
+        return joblib.load(model_path)
+    else:
+        raise FileNotFoundError(f"Le modèle LightGBM n'a pas été trouvé à {model_path}")
 
 lgb_model = load_lgb_model()
 
