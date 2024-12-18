@@ -79,7 +79,7 @@ if st.session_state.page == "Accueil":
     """)
 
     st.header("🗂 Description des Données")
-    file_path = "Ressources/data_description.txt"
+    file_path = "ressource/data_description.txt"
 
 
     try:
@@ -146,7 +146,7 @@ elif st.session_state.page == "Analyse":
     st.subheader("📄 Rapport en HTML")
 
     # Chemin du fichier HTML
-    html_file_path = "Ressources/data_report.html"
+    html_file_path = "ressource/data_report.html"
 
     try:
         # Lire le contenu du fichier HTML
