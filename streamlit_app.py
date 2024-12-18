@@ -13,7 +13,7 @@ st.set_page_config(page_title="Prédiction des prix immobiliers", layout="wide")
 # Fonction pour charger le modèle Ridge (mise en cache)
 @st.cache_resource
 def load_lgb_model():
-    return joblib.load('ressource/modele_final/lgb_model.pkl')  # Remplacez par le chemin réel de votre modèle
+    return joblib.load('../ressource/modele_final/lgb_model.pkl')  # Remplacez par le chemin réel de votre modèle
 
 lgb_model = load_lgb_model()
 
