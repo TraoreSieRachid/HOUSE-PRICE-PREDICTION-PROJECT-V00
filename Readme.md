@@ -1,4 +1,6 @@
 # **PROJET: HOUSE PRICE PREDICTION**
+![Présentation visuelle de l'app](ressource/images_et_videos/Page_garde.PNG)
+
 **LA DEMONSTRATION FAIT EN LIVE** 😊
 
 ![Présentation visuelle de l'app](ressource/images_et_videos/app_image.jpg)
@@ -15,7 +17,7 @@ Fait par des élèves ingénieurs statisticiens économistes de l'Ecole national
  [👉🔗 Cliquez ici pour y acceder: 🔗](https://house-price-prediction-project-v00-ensae-jodraff.streamlit.app/)
  ---
 
-![Présentation visuelle de l'app](ressource/images_et_videos/Page_garde.PNG)
+
 
 # Le projet est structuré en dossiers code, data et ressources
 
