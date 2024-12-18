@@ -1,16 +1,16 @@
 # **PROJET: HOUSE PRICE PREDICTION**
 ![Présentation visuelle de l'app](ressource/images_et_videos/Page_garde.PNG)
 
-**LA DEMONSTRATION FAIT EN LIVE** 😊
-
-![Présentation visuelle de l'app](ressource/images_et_videos/app_image.jpg)
-
 Fait par des élèves ingénieurs statisticiens économistes de l'Ecole nationale de la statistique et de l'analyse économique:
 
 - Adoumbaye Madjyam
 - Cheick Sadibou Ngom
 - Mum El hadj Sarr
 - sié rachid Traoré 
+
+**LA DEMONSTRATION FAIT EN LIVE** 😊
+
+![Présentation visuelle de l'app](ressource/images_et_videos/app_image.jpg)
 
 # **LIEN VERS L'APPLICATION DE PREDICTION DE PRIX IMMOBOLIER**
 
