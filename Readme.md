@@ -1,7 +1,7 @@
 # **PROJET: HOUSE PRICE PREDICTION**
 **LA DEMONSTRATION FAIT EN LIVE** 😊
 
- ![Présentation visuelle de l'app](ressource/app_image.jpg)
+![Présentation visuelle de l'app](ressource/images_et_videos/app_image.jpg)
 
 Fait par des élèves ingénieurs statisticiens économistes de l'Ecole nationale de la statistique et de l'analyse économique:
 
