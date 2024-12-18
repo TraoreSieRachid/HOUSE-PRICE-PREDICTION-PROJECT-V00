@@ -12,7 +12,6 @@ st.set_page_config(page_title="Prédiction des prix immobiliers", layout="wide")
 
 # Fonction pour charger le modèle Ridge (mise en cache)
 @st.cache_resource
-
 def load_lgb_model():
     model_path = 'ressource/modele_final/lgb_model.pkl'
     if os.path.exists(model_path):
@@ -25,11 +24,11 @@ lgb_model = load_lgb_model()
 # Chargement des autres Ressourcesss
 pipeline = joblib.load('ressource/pipeline/pipeline.pkl')
 data_performances = {
-    "Linear Regression": joblib.load('ressource/performance/GS_lr.pkl'),
-    "ElasticNet": joblib.load('ressource/performance/ElasticNet_model.pkl'),
-    "Random Forest Regressor": joblib.load('ressource/performance/rfr_model.pkl'),
-    "XGBoost": joblib.load('ressource/performance/xgb_model.pkl'),
-    "LightGBM": joblib.load('ressource/performance/lgb_model.pkl')
+    "Linear Regression": joblib.load('ressource/performance/GS_lr_perform.pkl'),
+    "ElasticNet": joblib.load('ressource/performance/ElasticNet_perform.pkl'),
+    "Random Forest Regressor": joblib.load('ressource/performance/rfr_perform.pkl'),
+    "XGBoost": joblib.load('ressource/performance/xgb_perform.pkl'),
+    "LightGBM": joblib.load('ressource/performance/lgb_perform.pkl')
 }
 
 # Fonction pour charger les données (mise en cache)
