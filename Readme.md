@@ -1,5 +1,5 @@
 # **PROJET: HOUSE PRICE PREDICTION**
-**LA DEMONSTRATION FAIT EN LIVE**
+**LA DEMONSTRATION FAIT EN LIVE** 😊
 
  ![Présentation visuelle de l'app](ressource/app_image.jpg)
 
@@ -10,6 +10,10 @@ Fait par des élèves ingénieurs statisticiens économistes de l'Ecole national
 - Mum El hadj Sarr
 - sié rachid Traoré 
 
+# **LIEN VERS L'APPLICATION DE PREDICTION DE PRIX IMMOBOLIER**
+
+ [👉🔗 Cliquez ici pour y acceder: 🔗](https://house-price-prediction-project-v00-ensae-jodraff.streamlit.app/)
+ ---
 
 # Le projet est structuré en dossiers code, data et ressources
 
@@ -32,6 +36,5 @@ Votre mission est d’aider les équipes de Laplace Immo **à avoir un simulateu
 - Réaliser une analyse exploratoire.
 - Tester différents modèles de prédiction afin de répondre au mieux à la problématique.
 - Il faut utiliser Github Actions pour le déploiement continu et l’interface web 'UI MLFlow" ou un autre outil d'affichage des résultats du tracking, concevoir des tests unitaires avec Pytest (ou Unittest) et les exécuter de manière automatisée lors du build réalisé par Github Actions et respecter les conventions PEP.
-
-
-# HOUSE-PRICE-PREDICTION-PROJECT-V0
+---
+---
