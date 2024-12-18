@@ -175,7 +175,7 @@ elif st.session_state.page == "Prédiction":
     if st.button("Prédire"):
         st.write("---")
         try:
-            predicted_price = np.exp(lgb_model.predict(input_data))
+            predicted_price = np.exp(lgbm_pipe.predict(input_data))
             st.success(f"Prix prédit : {predicted_price[0]:,.2f} unités monétaires")
         except Exception as e:
             st.error(f"Erreur : {e}")
