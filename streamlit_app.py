@@ -167,7 +167,7 @@ elif st.session_state.page == "Prédiction":
         if train_df_labelled[col_label].dtype == 'object':
             form_data[col_label] = st.selectbox(f"{col_label}", input_train[col_label].unique())
         else:
-            form_data[col_label] = st.number_input(f"{col_label}", float(input_train[col_label].min()), float(input_train[col_label].max()))
+            form_data[col_label] = st.number_input(f"{col_label}")
 
     input_data = pd.DataFrame([form_data])
     if st.checkbox("Afficher les données saisies:"):
