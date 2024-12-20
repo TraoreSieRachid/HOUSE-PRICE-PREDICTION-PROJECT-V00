@@ -28,6 +28,14 @@ data_performances = {
     "LightGBM": joblib.load('ressource/performance/lgb_perform.pkl')
 }
 
+modeles = {
+    "Linear Regression": joblib.load('ressource/modele/GS_lr_model.pkl'),
+    "ElasticNet": joblib.load('ressource/modele/ElasticNet_model.pkl'),
+    "Random Forest Regressor": joblib.load('ressource/modele/rfr_model.pkl'),
+    "XGBoost": joblib.load('ressource/modele/xgb_model.pkl'),
+    "LightGBM": joblib.load('ressource/modele/lgb_model.pkl')
+}
+
 # Fonction pour charger les données (mise en cache)
 @st.cache_data
 def load_data(file_path):
@@ -161,8 +169,21 @@ elif st.session_state.page == "Analyse":
 # Section Prédiction
 elif st.session_state.page == "Prédiction":
     st.subheader("🔍 Prédiction des Prix")
+    
+    # Ajout d'une liste pour que l'utilisateur puisse choisir un modèle
+    model_choice = st.selectbox("Choisissez un modèle de prédiction", list(modeles.keys()))
+
+    # Vérifier si le modèle est disponible
+    selected_model = lgbm_pipe  # Exemple : pipeline commun si applicable
+    if model_choice in modeles:
+        selected_model = modeles[model_choice]
+    else:
+        st.error(f"Le modèle {model_choice} n'est pas disponible.")
+        st.stop()
+
     form_data = {}
-    input_train=train_df_labelled.drop(["Prix de vente"], axis=1)
+    input_train = train_df_labelled.drop(["Prix de vente"], axis=1)
+    # Création des champs de saisie utilisateur
     for col_label in input_train.columns:
         if train_df_labelled[col_label].dtype == 'object':
             form_data[col_label] = st.selectbox(f"{col_label}", input_train[col_label].unique())
@@ -170,16 +191,19 @@ elif st.session_state.page == "Prédiction":
             form_data[col_label] = st.number_input(f"{col_label}")
 
     input_data = pd.DataFrame([form_data])
-    if st.checkbox("Afficher les données saisies:"):
+
+    # Affichage des données saisies
+    if st.checkbox("Afficher les données saisies :"):
         st.dataframe(input_data)
         st.write("---")
+    # Bouton pour effectuer la prédiction
     if st.button("Prédire"):
         st.write("---")
         try:
-            predicted_price = np.exp(lgbm_pipe.predict(input_data))
-            st.success(f"Prix prédit : {predicted_price[0]:,.2f} unités monétaires")
+            predicted_price = np.exp(selected_model.predict(input_data))
+            st.success(f"Prix prédit ({model_choice}) : {predicted_price[0]:,.2f} unités monétaires")
         except Exception as e:
-            st.error(f"Erreur : {e}")
+            st.error(f"Erreur avec le modèle {model_choice} : {e}")
 
 # Section Performance
 elif st.session_state.page == "Performance":
