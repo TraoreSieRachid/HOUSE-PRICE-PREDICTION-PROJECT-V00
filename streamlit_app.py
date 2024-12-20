@@ -32,7 +32,7 @@ modeles = {
     "Linear Regression": joblib.load('ressource/modele/GS_lr_model.pkl'),
     "ElasticNet": joblib.load('ressource/modele/ElasticNet_model.pkl'),
     "Random Forest Regressor": joblib.load('ressource/modele/rfr_model.pkl'),
-    "XGBoost": joblib.load('ressource/modele/xgb_model.pkl'),
+    "XGBoost": joblib.load('ressource/modele/ElasticNet_model.pkl'),
     "LightGBM": joblib.load('ressource/modele/lgb_model.pkl')
 }
 
