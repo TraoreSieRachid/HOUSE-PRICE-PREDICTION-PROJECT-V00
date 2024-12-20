@@ -174,7 +174,7 @@ elif st.session_state.page == "Prédiction":
     model_choice = st.selectbox("Choisissez un modèle de prédiction", list(modeles.keys()))
 
     # Vérifier si le modèle est disponible
-    selected_model = lgbm_pipe  # Exemple : pipeline commun si applicable
+#    selected_model = lgbm_pipe  # Exemple : pipeline commun si applicable
     if model_choice in modeles:
         selected_model = modeles[model_choice]
     else:
