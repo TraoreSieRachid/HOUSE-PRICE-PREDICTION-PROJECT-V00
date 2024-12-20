@@ -162,11 +162,12 @@ elif st.session_state.page == "Analyse":
 elif st.session_state.page == "Prédiction":
     st.subheader("🔍 Prédiction des Prix")
     form_data = {}
-    for col_label in train_df_labelled.drop(["Prix de vente"]).columns:
+    input_train=train_df_labelled.drop(["Prix de vente"])
+    for col_label in input_train.columns:
         if train_df_labelled[col_label].dtype == 'object':
-            form_data[col_label] = st.selectbox(f"{col_label}", train_df_labelled[col_label].unique())
+            form_data[col_label] = st.selectbox(f"{col_label}", input_train[col_label].unique())
         else:
-            form_data[col_label] = st.number_input(f"{col_label}", float(train_df_labelled[col_label].min()), float(train_df_labelled[col_label].max()))
+            form_data[col_label] = st.number_input(f"{col_label}", float(input_train[col_label].min()), float(input_train[col_label].max()))
 
     input_data = pd.DataFrame([form_data])
     if st.checkbox("Afficher les données saisies:"):
