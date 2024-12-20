@@ -19,7 +19,6 @@ def load_lgb_model():
 lgb_model = load_lgb_model()
 
 # Chargement des autres Ressourcesss
-lgbm_pipe = joblib.load('ressource/pipeline/lgbm_pipe.pkl')
 data_performances = {
     "Linear Regression": joblib.load('ressource/performance/GS_lr_perform.pkl'),
     "ElasticNet": joblib.load('ressource/performance/ElasticNet_perform.pkl'),
