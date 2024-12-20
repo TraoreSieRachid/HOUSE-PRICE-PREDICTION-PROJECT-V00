@@ -162,7 +162,7 @@ elif st.session_state.page == "Analyse":
 elif st.session_state.page == "Prédiction":
     st.subheader("🔍 Prédiction des Prix")
     form_data = {}
-    for col_label in train_df_labelled.columns:
+    for col_label in train_df_labelled.drop(["Prix de vente"]).columns:
         if train_df_labelled[col_label].dtype == 'object':
             form_data[col_label] = st.selectbox(f"{col_label}", train_df_labelled[col_label].unique())
         else:
